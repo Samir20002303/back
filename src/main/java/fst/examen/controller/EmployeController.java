@@ -46,7 +46,7 @@ public class EmployeController {
         LocalDate date = LocalDate.parse(dateNaissance);
         String directory = "src/main/resources/static/images/"+nom+".png";
         photo.transferTo(Path.of(directory));
-        String imageUrl = "http://localhost:8080/images/" + nom +".png";
+        String imageUrl = "http://localhost:8080/images/" + nom;
 
         Departement departement = departementRepository.findById(departementId)
                 .orElseThrow(() -> new RuntimeException("Département non trouvé"));
